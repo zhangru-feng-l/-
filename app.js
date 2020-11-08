@@ -71,7 +71,7 @@ var app = express();
 
 
 
-// session 路由守卫
+// 2、session 路由守卫
 app.use(
   session({
     //session 加密信息
@@ -105,6 +105,9 @@ app.all("*", (req, res, next) => {
 
 
 
+
+
+
 // 三、1、连接view这个文件，也就是连接里面的ejs静态页面
 // path.join(__dirname app.js的根目录到views这个文件
 app.set('views', path.join(__dirname, 'views'));
@@ -117,8 +120,11 @@ app.set('view engine', 'ejs');
 
 
 
+
+
 // 四、dev的时候会处理logger日志
 app.use(logger('dev'));
+
 
 
 
